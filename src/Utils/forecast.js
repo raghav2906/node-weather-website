@@ -14,7 +14,7 @@ const forecast = (Lat, Long, callback) => {
         {
             const propc = body.current
             const propl = body.location
-            const info = `in ${propl.country} ${propl.region} there is  ${propc.weather_descriptions[0]} enviornment. \nIt is currently  ${propc.temperature} degree out. It feels like ${propc.feelslike} degree out.`
+            const info = `There is  ${propc.weather_descriptions[0]} enviornment with current date & time : ${body.location.localtime}. \nIt is currently  ${propc.temperature} degree out. It feels like ${propc.feelslike} degree out.The humidity level is ${body.current.humidity} . `
             callback(undefined, info)
         }
     })
